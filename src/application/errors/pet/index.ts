@@ -1,1 +1,1 @@
-export * from './guardian-not-found'
+export * from './user-not-found'

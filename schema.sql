@@ -10,3 +10,12 @@ create table users (
   password text not null
 )
 
+create table pet (
+  id text not null primary key,
+  name text not null,
+  age numeric not null,
+  user_id text not null references users(id),
+  weight numeric,
+  birth_date date
+)
+

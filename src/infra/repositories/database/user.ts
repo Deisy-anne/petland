@@ -2,7 +2,7 @@ import { IAddUserRepository, ICheckUserByEmailRepository, ICheckUserByIdReposito
 import { User } from '@/domain/entities'
 import { IConnection } from '@/infra/databases/connection'
 
-export class UserRepositoryDatabase implements
+export class UserDatabaseRepository implements
 IAddUserRepository,
 ICheckUserByEmailRepository,
 ICheckUserByIdRepository,

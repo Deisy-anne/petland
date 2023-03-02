@@ -7,8 +7,8 @@ export class PetDatabaseRepository implements IAddPetRepository {
     private readonly connection: IConnection
   ) {}
 
-  async add ({ id, name, age, guardianId, weight, birthDate }: Pet): Promise<void> {
-    const sql = 'insert into pet (id, name, age, guardian_id, weight, birth_date) values ($1, $2, $3, $4, $5, $6)'
-    await this.connection.query(sql, [id, name, age, guardianId, weight, birthDate])
+  async add ({ id, name, age, userId, weight, birthDate }: Pet): Promise<void> {
+    const sql = 'insert into pet (id, name, age, user_id, weight, birth_date) values ($1, $2, $3, $4, $5, $6)'
+    await this.connection.query(sql, [id, name, age, userId, weight, birthDate])
   }
 }
